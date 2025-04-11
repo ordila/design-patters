@@ -5,6 +5,8 @@ import { toast } from "sonner";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+type Shapes = "Circle" | "Square" | "Rectangle";
+
 // components
 import { Button } from "@/components/ui/button";
 import {
@@ -40,8 +42,12 @@ class Rectangle extends Shape {
   }
 }
 
-class ShapeFactory {
-  public getShape(shapeType: string): Shape {
+abstract class Factory {
+  abstract getShape(shapeType: Shapes): Shape;
+}
+
+class ShapeFactory extends Factory {
+  public getShape(shapeType: Shapes): Shape {
     switch (shapeType) {
       case "Circle":
         return new Circle();
@@ -70,7 +76,7 @@ export const FactoryMethod = () => {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     const factory = new ShapeFactory();
-    const shape = factory.getShape(values.shape);
+    const shape = factory.getShape(values.shape as Shapes);
 
     shape.draw();
   };
