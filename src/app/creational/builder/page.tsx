@@ -1,5 +1,5 @@
 // patterns
-import { Builder } from "@/patterns/builder/builder";
+import { Builder } from "@/patterns/creational";
 
 // components
 import { PatternWrapper } from "@/components/pattern-wrapper/pattern-wrapper";

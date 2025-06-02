@@ -1,5 +1,5 @@
 // patterns
-import { FactoryMethod } from "@/patterns/factory-method/factory-method";
+import { FactoryMethod } from "@/patterns/creational";
 
 // components
 import { PatternWrapper } from "@/components/pattern-wrapper/pattern-wrapper";

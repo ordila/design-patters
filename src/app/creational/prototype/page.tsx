@@ -2,7 +2,7 @@
 
 // components
 import { PatternWrapper } from "@/components/pattern-wrapper/pattern-wrapper";
-import { Prototype } from "@/patterns/prototype/Prototype";
+import { Prototype } from "@/patterns/creational";
 
 const PrototypePage = () => {
   return (

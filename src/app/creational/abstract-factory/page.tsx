@@ -1,5 +1,5 @@
 // patterns
-import { AbstractFactory } from "@/patterns/abstract-factory/abstract-factory";
+import { AbstractFactory } from "@/patterns/creational";
 
 // components
 import { PatternWrapper } from "@/components/pattern-wrapper/pattern-wrapper";
