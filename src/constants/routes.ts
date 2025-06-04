@@ -3,6 +3,7 @@ import { fromConstantToLabel } from "@/utils/string";
 
 export const PATTERN_TYPES = {
   CREATIONAL_PATTERNS: "creational",
+  STRUCTURAL_PATTERNS: "structural",
 } as const;
 
 export const ROUTES = {
@@ -13,6 +14,9 @@ export const ROUTES = {
   BUILDER: `/${PATTERN_TYPES.CREATIONAL_PATTERNS}/builder`,
   PROTOTYPE: `/${PATTERN_TYPES.CREATIONAL_PATTERNS}/prototype`,
   SINGLETON: `/${PATTERN_TYPES.CREATIONAL_PATTERNS}/singleton`,
+
+  // Structural Patterns
+  ADAPTER: `/${PATTERN_TYPES.STRUCTURAL_PATTERNS}/adapter`,
 };
 
 type TRoute = keyof typeof ROUTES;
